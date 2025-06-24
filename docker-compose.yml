@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  n8nsmartbot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: n8nsmartbot
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
