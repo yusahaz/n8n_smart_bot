@@ -1,5 +1,5 @@
 fastapi
 uvicorn
 pandas
-numpy
-ta-lib
+numpy==1.24.4
+pandas_ta
